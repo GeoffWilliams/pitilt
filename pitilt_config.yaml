@@ -1,0 +1,18 @@
+pitilt:
+    username: pitilt
+    password: X
+    host: "0.0.0.0"
+    port: 8000
+    debug: true
+    uvicorn_log_level: info
+
+mqtt:
+  transport: tcp
+  mqtt_enabled: true
+  tls_enabled: true
+  auth_method: mtls
+  host: mosquitto.infrastructure.asio
+  port: 8883
+  cacert_path: /home/geoff/tls/ca.cert.pem
+  client_cert_path: /home/geoff/tls/rpicam.cert-fullchain.pem
+  client_key_path: /home/geoff/tls/rpicam.key.pem

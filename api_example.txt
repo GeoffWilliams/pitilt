@@ -1,0 +1,124 @@
+  509  ssh rpicam-0.untrusted.asio
+  510  curl -X POST http://rpicam-1:8000/api/v1/left
+  511  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  512  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  513  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/doc
+  514  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/docs
+  515  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1//left
+  516  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/1/left
+  517  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/1/left
+  518  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  519  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  520  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  521  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  522  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/right
+  523  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/right
+  524  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/down
+  525  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/up
+  526  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  527  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  528  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  529  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  530  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  531  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  532  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  533  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  534  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  535  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  536  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  537  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  538  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  539  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  540  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  541  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  542  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  543  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  544  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  545  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  546  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  547  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  548  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  549  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  550  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  551  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  552  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  553  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  554  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  555  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  556  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  557  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  558  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  559  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  560  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  561  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  562  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  563  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  564  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  565  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  566  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  567  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  568  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  569  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  570  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  571  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  572  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  573  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  574  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  575  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  576  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  577  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  578  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  579  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  580  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  581  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  582  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  583  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  584  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  585  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  586  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  587  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  588  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  589  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/down
+  590  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/down
+  591  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/down
+  592  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/down
+  593  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/down
+  594  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/down
+  595  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/down
+  596  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/down
+  597  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/down
+  598  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/down
+  599  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/down
+  600  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/down
+  601  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/down
+  602  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/down
+  603  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/down
+  604  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/down
+  605  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/down
+  606  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/down
+  607  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/down
+  608  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/locations/bed
+  609  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  610  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  611  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/left
+  612  curl -d '{"value": 20}' -X PUT http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/pan
+  613  curl -H "Content-Type: application/json" -d '{"value": 20}' -X PUT http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/pan
+  614  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/locations/door
+  615  curl -X POST http://pitPUT X@rpicam-1.untrusted.asio:8000/api/v1/locations/bed
+  616  curl -X PUT http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/locations/bed
+  617  curl -X PUT http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/locations/door
+  618  curl -X PUT http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/locations/bed
+  619  curl -X PUT http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/locations/bed
+  620  curl -X POST http://pitPUT X@rpicam-1.untrusted.asio:8000/api/v1/locations/door
+  621  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/locations/door
+  622  curl -H "Content-Type: application/json" -d '{"value": 120}' -X PUT http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/pan
+  623  curl -H "Content-Type: application/json" -d '{"value": 120}' -X PUT http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/pan
+  624  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/locations/bed
+  625  curl -H "Content-Type: application/json" -d '{"value": 20}' -X PUT http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/pan
+  626  curl -X POST http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/locations/door
+  627  curl -X PUT http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/locations/bed
+  628  curl -H "Content-Type: application/json" -d '{"value": 160}' -X PUT http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/pan
+  629  curl -H "Content-Type: application/json" -d '{"value": 160}' -X PUT htt3://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/pan
+  630  curl -H "Content-Type: application/json" -d '{"value": 130}' -X PUT http://pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/pan
+  631  curl -H "Content-Type: application/json" -d '{"value": 130}' -X PUT htt29//pitilt:X@rpicam-1.untrusted.asio:8000/api/v1/pan
+  632  history

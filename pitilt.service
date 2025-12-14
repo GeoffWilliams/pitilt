@@ -1,0 +1,13 @@
+[Unit]
+Description=pitilt: pan/tilt daemon
+After=network.target
+
+[Service]
+User=pitilt
+Group=pitilt
+ExecStart=/opt/pitilt/pitilt.sh
+WorkingDirectory=/opt/pitilt
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

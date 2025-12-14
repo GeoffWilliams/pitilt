@@ -1,0 +1,9 @@
+APP_NAME = "pitilt"
+API_VERSION = "v1"
+LOG_CONFIG  = "log_config.json"
+DEFAULT_CONFIG_FILE = f"/etc/{APP_NAME}/{APP_NAME}_config.yaml"
+DEFAULT_STATE_FILE  = f"/var/lib/{APP_NAME}/{APP_NAME}_state.json"
+DEFAULT_SERVO_STEP  = 1
+DEFAULT_SERVO_SLEEP = 0.025
+AUTH_METHOD_MTLS = "mtls"
+AUTH_METHOD_PASSWORD = "password"
