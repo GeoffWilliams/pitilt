@@ -119,6 +119,8 @@ def get_device_command_topic():
 # eg
 # homeassistant/sensor/plant_sensor_1/temperature/configs
 # homeassistant/device_automation/0x90fd9ffffedf1266/action_arrow_left_click/config
+#
+# homeassistant/button/rpicam-0/left/config
 def homeassistant_register(client):
     config = get_config()
     ha_base_topic = f"{config.mqtt.ha_device_base_topic}/button/{config.mqtt.client_id}"
