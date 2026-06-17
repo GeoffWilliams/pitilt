@@ -86,7 +86,11 @@ def on_connect(client, userdata, flags, rc, properties):
     if rc == 0:
         logger.info("Connected to MQTT Broker!")
     else:
-        logger.info("Failed to connect, return code %d\n", rc)
+        logger.error("Failed to connect, return code %d\n", rc)
+
+    logger.info("subscribe...")
+    client.subscribe(get_device_command_topic())
+
 
 def on_publish(a, b, c):
     logger.debug("on_publish")
@@ -286,7 +290,7 @@ def start_mqtt():
     # Exactly once (QoS 2): QoS 2 guarantees that each message is delivered exactly once by using a four-step handshake (PUBLISH, PUBREC, PUBREL, PUBCOMP). 
 
     homeassistant_register(client)
-    client.subscribe(get_device_command_topic())
+    # client.subscribe(get_device_command_topic())
 
     # #,0,properties=properties)
     # #result = client.publish("test",'qos=0 Cedalo Mosquitto is awesome',0,properties=properties)

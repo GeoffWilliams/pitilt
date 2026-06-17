@@ -1,0 +1,24 @@
+mosquitto_pub \
+    -h mosquitto.infrastructure.asio \
+    -p 8883 \
+    --cafile ~/asio_ca/ca/certs/ca.cert.pem \
+    --cert ~/asio_ca/intermediate/certs/rpicam.cert-fullchain.pem \
+    --key ~/asio_ca/intermediate/private/rpicam.key.pem \
+    -t pitilt/rpicam-0/command \
+    -m 
+    
+    
+'{"command": "location", "argument": "3d_printer"}'
+'{"command": "location", "argument": "door"}'
+'{"command": "move_rel", "argument": "left"}'
+'{"command": "move_rel", "argument": "right"}'
+'{"command": "move_rel", "argument": "up"}'
+'{"command": "move_rel", "argument": "down"}'
+
+mosquitto_sub \
+    -h mosquitto.infrastructure.asio \
+    -p 8883 \
+    --cafile ~/asio_ca/ca/certs/ca.cert.pem \
+    --cert ~/asio_ca/intermediate/certs/rpicam.cert-fullchain.pem \
+    --key ~/asio_ca/intermediate/private/rpicam.key.pem \
+    -t pitilt/rpicam-0/command 
