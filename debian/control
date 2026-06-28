@@ -9,6 +9,8 @@ Build-Depends:
  python3-dev,
  build-essential,
  libffi-dev,
+ swig,
+ liblgpio-dev,
  ca-certificates
 Standards-Version: 4.6.2
 Rules-Requires-Root: no
@@ -19,6 +21,7 @@ Depends:
  ${shlibs:Depends},
  ${misc:Depends},
  python3,
+ liblgpio1,
  adduser
 Description: PiTilt monitoring service
  A Python application packaged with a self-contained virtualenv. The

@@ -14,9 +14,11 @@ RUN apt-get update && \
         python3-venv \
         python3-dev \
         libffi-dev \
+        swig \
+        liblgpio-dev \
         ca-certificates && \
-    # Add any extra -dev libraries your requirements.txt needs to compile here,
-    # e.g. liblgpio-dev libbluetooth-dev
+    # Add any other -dev libraries your requirements.txt needs to compile here,
+    # e.g. libbluetooth-dev
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /build

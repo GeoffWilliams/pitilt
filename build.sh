@@ -36,7 +36,8 @@ else
     IMAGE="docker.io/vascoguita/raspios:${BASE_TAG}"
     INSTALL_DEPS="apt-get update && apt-get install -y --no-install-recommends \
         build-essential debhelper devscripts dpkg-dev fakeroot \
-        python3 python3-venv python3-dev libffi-dev ca-certificates &&"
+        python3 python3-venv python3-dev libffi-dev ca-certificates \
+        swig liblgpio-dev &&"
 fi
 
 echo ">> Building pitilt .deb for ${ARCH} using ${IMAGE} ..."
