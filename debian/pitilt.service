@@ -1,0 +1,47 @@
+[Unit]
+Description=PiTilt monitoring service
+Documentation=file:/etc/pitilt/pitilt.ini
+After=network-online.target
+Wants=network-online.target
+# If your app talks to a Tilt over Bluetooth LE, also uncomment:
+# After=bluetooth.target
+# Wants=bluetooth.target
+
+[Service]
+Type=simple
+User=pitilt
+Group=pitilt
+WorkingDirectory=/opt/pitilt/app
+ExecStart=/opt/pitilt/venv/bin/python /opt/pitilt/app.py
+Restart=on-failure
+RestartSec=5
+
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONDONTWRITEBYTECODE=1
+
+# Writable runtime state at /var/lib/pitilt (auto-created and chowned).
+StateDirectory=pitilt
+StateDirectoryMode=0750
+
+# --- Sandboxing -------------------------------------------------------------
+# Relaxed where hardware access is required. Tighten/loosen to taste.
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ProtectControlGroups=true
+ProtectKernelTunables=true
+RestrictSUIDSGID=true
+# NOTE: do NOT set PrivateDevices=true if you need GPIO/I2C/SPI/serial,
+# as it hides the hardware device nodes from the service.
+#
+# Supplementary group membership for hardware access is granted in the
+# postinst (gpio/i2c/spi/dialout/bluetooth) so that a missing group on a
+# given image never blocks service start-up.
+#
+# For Bluetooth LE scanning as non-root you may additionally need:
+# AmbientCapabilities=CAP_NET_RAW CAP_NET_ADMIN
+# CapabilityBoundingSet=CAP_NET_RAW CAP_NET_ADMIN
+
+[Install]
+WantedBy=multi-user.target

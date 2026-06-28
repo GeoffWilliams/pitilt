@@ -1,0 +1,24 @@
+#!/bin/sh
+# postrm script for pitilt
+set -e
+
+case "$1" in
+    purge)
+        rm -rf /etc/pitilt
+        rm -rf /var/lib/pitilt
+
+        if getent passwd pitilt >/dev/null; then
+            deluser --system pitilt >/dev/null 2>&1 || true
+        fi
+        if getent group pitilt >/dev/null; then
+            delgroup --system pitilt >/dev/null 2>&1 || true
+        fi
+        ;;
+
+    remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
+        ;;
+esac
+
+#DEBHELPER#
+
+exit 0

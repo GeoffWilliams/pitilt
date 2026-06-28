@@ -1,0 +1,67 @@
+#!/usr/bin/make -f
+# debian/rules for pitilt
+# Builds a self-contained virtualenv under /opt/pitilt/venv and installs the
+# application under /opt/pitilt/app, using the system python3.
+
+export DH_VERBOSE = 1
+
+# Keep pip quiet and stop it writing caches into the build tree.
+export PIP_DISABLE_PIP_VERSION_CHECK = 1
+export PIP_NO_CACHE_DIR = 1
+export PIP_ROOT_USER_ACTION = ignore
+
+# Final, on-target install locations.
+PREFIX := /opt/pitilt
+VENV   := $(PREFIX)/venv
+APPDIR := $(PREFIX)/app
+
+# Staging root for the binary package.
+DEST   := debian/pitilt
+
+%:
+	dh $@
+
+# We bundle our own virtualenv; the default build system has nothing to do.
+override_dh_auto_build:
+
+override_dh_auto_test:
+
+override_dh_auto_install:
+	# --- application code ------------------------------------------------
+	install -d $(DEST)$(APPDIR)
+	cp -a src $(DEST)$(APPDIR)/
+	find $(DEST)$(APPDIR) -name '__pycache__' -type d -prune -exec rm -rf {} +
+	find $(DEST)$(APPDIR) -name '*.py[co]' -delete
+
+	# --- virtualenv (built with the system python3) ----------------------
+	python3 -m venv $(DEST)$(VENV)
+	$(DEST)$(VENV)/bin/python -m pip install --upgrade pip setuptools wheel
+	$(DEST)$(VENV)/bin/python -m pip install -r requirements.txt
+
+	# The venv has the *staging* path baked into shebangs, the activate
+	# scripts and pyvenv.cfg. Rewrite those to the final on-target path.
+	find $(DEST)$(VENV)/bin -type f -print0 \
+	  | xargs -0 sed -i 's|$(CURDIR)/$(DEST)$(VENV)|$(VENV)|g'
+	sed -i 's|$(CURDIR)/$(DEST)$(VENV)|$(VENV)|g' $(DEST)$(VENV)/pyvenv.cfg
+
+	# Bytecode is path-stamped and not needed in the package.
+	find $(DEST)$(VENV) -name '__pycache__' -type d -prune -exec rm -rf {} +
+	find $(DEST)$(VENV) -name '*.py[co]' -delete
+
+	# --- configuration (auto-registered as a conffile because it is /etc) -
+	install -d $(DEST)/etc/pitilt
+	install -m 0644 config/pitilt.ini $(DEST)/etc/pitilt/pitilt.ini
+
+# Treat the bundled venv as opaque payload: do not let debhelper strip,
+# scan for library dependencies, or run dwz over the third-party shared
+# objects that pip dropped inside it.
+override_dh_shlibdeps:
+	dh_shlibdeps -X$(PREFIX)
+
+override_dh_strip:
+	dh_strip -X$(PREFIX)
+
+override_dh_strip_nondeterminism:
+	dh_strip_nondeterminism -X$(PREFIX)
+
+override_dh_dwz:

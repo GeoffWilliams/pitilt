@@ -1,0 +1,10 @@
+please create debian packaging files to allow a python project to be built as a .deb file for raspberry pi os (trixie).
+It should have the following rules/features:
+1. use system python
+2. install the python app under /opt/pitilt
+3. use a venv and bundle all libraries from requirements.txt in /opt/pitilt/venv
+4. config file under /etc/pitilt
+5. pitilt user and group
+5. systemd Service
+For build, lets use podman to run a basic raspberry pi os container environment, don't bother trying to run on the host we build on as it wont work due to pip not being able to install libraries for gpio, etc. we can use this docker image: [vascoguita/raspios](https://hub.docker.com/r/vascoguita/raspios)
+

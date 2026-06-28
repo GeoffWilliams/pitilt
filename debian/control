@@ -1,0 +1,28 @@
+Source: pitilt
+Section: utils
+Priority: optional
+Maintainer: Your Name <you@example.com>
+Build-Depends:
+ debhelper-compat (= 13),
+ python3 (>= 3.11),
+ python3-venv,
+ python3-dev,
+ build-essential,
+ libffi-dev,
+ ca-certificates
+Standards-Version: 4.6.2
+Rules-Requires-Root: no
+
+Package: pitilt
+Architecture: any
+Depends:
+ ${shlibs:Depends},
+ ${misc:Depends},
+ python3,
+ adduser
+Description: PiTilt monitoring service
+ A Python application packaged with a self-contained virtualenv. The
+ application code is installed under /opt/pitilt, all Python dependencies
+ from requirements.txt are bundled into /opt/pitilt/venv, configuration
+ lives in /etc/pitilt and the program runs as a systemd service under a
+ dedicated unprivileged "pitilt" user.

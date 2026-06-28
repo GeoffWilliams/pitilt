@@ -1,0 +1,49 @@
+#!/bin/sh
+# postinst script for pitilt
+set -e
+
+case "$1" in
+    configure)
+        # --- system group ---------------------------------------------------
+        if ! getent group pitilt >/dev/null; then
+            addgroup --system pitilt
+        fi
+
+        # --- system user ----------------------------------------------------
+        if ! getent passwd pitilt >/dev/null; then
+            adduser --system \
+                    --no-create-home \
+                    --ingroup pitilt \
+                    --home /opt/pitilt \
+                    --shell /usr/sbin/nologin \
+                    --gecos "PiTilt service" \
+                    pitilt
+        fi
+
+        # --- hardware-access groups ----------------------------------------
+        # Only added if the group exists on this image, so a missing group
+        # never breaks the install or service start-up.
+        for grp in gpio i2c spi dialout bluetooth; do
+            if getent group "$grp" >/dev/null; then
+                adduser pitilt "$grp" >/dev/null 2>&1 || true
+            fi
+        done
+
+        # --- configuration ownership / permissions -------------------------
+        if [ -d /etc/pitilt ]; then
+            chown root:pitilt /etc/pitilt
+            chmod 0750 /etc/pitilt
+        fi
+        if [ -f /etc/pitilt/pitilt.ini ]; then
+            chown root:pitilt /etc/pitilt/pitilt.ini
+            chmod 0640 /etc/pitilt/pitilt.ini
+        fi
+        ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+        ;;
+esac
+
+#DEBHELPER#
+
+exit 0
