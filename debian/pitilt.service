@@ -1,6 +1,6 @@
 [Unit]
 Description=PiTilt monitoring service
-Documentation=file:/etc/pitilt/pitilt.ini
+# Documentation=file:/etc/pitilt/pitilt.ini
 After=network-online.target
 Wants=network-online.target
 # If your app talks to a Tilt over Bluetooth LE, also uncomment:
@@ -11,13 +11,14 @@ Wants=network-online.target
 Type=simple
 User=pitilt
 Group=pitilt
-WorkingDirectory=/opt/pitilt/app
-ExecStart=/opt/pitilt/venv/bin/python /opt/pitilt/pitilt
+RuntimeDirectory=pitilt
+WorkingDirectory=/run/pitilt
+ExecStart=/opt/pitilt/venv/bin/python /opt/pitilt/app/src/app.py
 Restart=on-failure
 RestartSec=5
 
-Environment=PYTHONUNBUFFERED=1
-Environment=PYTHONDONTWRITEBYTECODE=1
+# Environment=PYTHONUNBUFFERED=1
+# Environment=PYTHONDONTWRITEBYTECODE=1
 
 # Writable runtime state at /var/lib/pitilt (auto-created and chowned).
 StateDirectory=pitilt
@@ -25,13 +26,13 @@ StateDirectoryMode=0750
 
 # --- Sandboxing -------------------------------------------------------------
 # Relaxed where hardware access is required. Tighten/loosen to taste.
-NoNewPrivileges=true
-ProtectSystem=strict
-ProtectHome=true
-PrivateTmp=true
-ProtectControlGroups=true
-ProtectKernelTunables=true
-RestrictSUIDSGID=true
+# NoNewPrivileges=true
+# ProtectSystem=strict
+# ProtectHome=true
+# PrivateTmp=true
+# ProtectControlGroups=true
+# ProtectKernelTunables=true
+# RestrictSUIDSGID=true
 # NOTE: do NOT set PrivateDevices=true if you need GPIO/I2C/SPI/serial,
 # as it hides the hardware device nodes from the service.
 #

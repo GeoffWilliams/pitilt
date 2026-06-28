@@ -50,7 +50,8 @@ override_dh_auto_install:
 
 	# --- configuration (auto-registered as a conffile because it is /etc) -
 	install -d $(DEST)/etc/pitilt
-	install -m 0644 pitilt_config.yaml $(DEST)/etc/pitilt/pitilt_config.yaml
+	install -m 0644 config/pitilt_config.yaml $(DEST)/etc/pitilt/pitilt_config.yaml
+	install -m 0644 config/log_config.json $(DEST)/etc/pitilt/log_config.json
 
 # Treat the bundled venv as opaque payload: do not let debhelper strip,
 # scan for library dependencies, or run dwz over the third-party shared

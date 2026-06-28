@@ -34,9 +34,13 @@ case "$1" in
             chown root:pitilt /etc/pitilt
             chmod 0750 /etc/pitilt
         fi
-        if [ -f /etc/pitilt/pitilt.ini ]; then
+        if [ -f /etc/pitilt/pitilt_config.yaml ]; then
             chown root:pitilt /etc/pitilt/pitilt_config.yaml
             chmod 0640 /etc/pitilt/pitilt_config.yaml
+        fi
+        if [ -f /etc/pitilt/log_config.json ]; then
+            chown root:pitilt /etc/pitilt/log_config.json
+            chmod 0640 /etc/pitilt/log_config.json
         fi
         ;;
 
